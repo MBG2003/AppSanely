@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicacion.controller.modulos.finanzas.VentanaTesoreriaController">
+   <children>
+      <TabPane prefHeight="623.0" prefWidth="763.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Estados financieros">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="763.0">
+                     <children>
+                        <ImageView fitHeight="354.0" fitWidth="763.0" opacity="0.05">
+                           <image>
+                              <Image url="@../../design/Sanely%20logo.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tableEmpleados" layoutY="354.0" prefHeight="240.0" prefWidth="763.0">
+                           <columns>
+                              <TableColumn prefWidth="386.0" text="..." />
+                              <TableColumn prefWidth="376.0" text="..." />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="236.0" layoutY="20.0" text="Gestión de Estados Financieros" textFill="#220557">
+                           <font>
+                              <Font name="Forte" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btVolverEF" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+                        <Separator layoutY="290.0" prefHeight="0.0" prefWidth="763.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Nóminas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="763.0">
+                     <children>
+                        <ImageView fitHeight="354.0" fitWidth="763.0" opacity="0.05">
+                           <image>
+                              <Image url="@../../design/Sanely%20logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="18.0" layoutY="77.0" text="Documento empleado:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="71.0" layoutY="180.0" text="Mes a liquidar:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCodMunecoMolde" layoutX="190.0" layoutY="75.0" />
+                        <TextField fx:id="txtCodMolde" layoutX="558.0" layoutY="75.0" />
+                        <TextField fx:id="txtValorMolde" layoutX="190.0" layoutY="108.0" />
+                        <Label layoutX="394.0" layoutY="145.0" text="Desprendible de pago:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="102.0" layoutY="217.0" text="Quincena:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btAgregarNomina" layoutX="137.0" layoutY="310.0" mnemonicParsing="false" onAction="#agregarNomina" text="Agregar" />
+                        <Button fx:id="btActualizarNomina" layoutX="286.0" layoutY="310.0" mnemonicParsing="false" onAction="#actualizarNomina" text="Actualizar" />
+                        <Button fx:id="btEliminarNomina" layoutX="450.0" layoutY="310.0" mnemonicParsing="false" onAction="#eliminarNomina" text="Eliminar" />
+                        <TableView fx:id="tableEmpleados1" layoutY="354.0" prefHeight="240.0" prefWidth="763.0">
+                           <columns>
+                              <TableColumn prefWidth="99.0" text="Doc. Empleado" />
+                              <TableColumn prefWidth="183.0" text="Nom. Empleado" />
+                              <TableColumn prefWidth="128.0" text="Cargo" />
+                              <TableColumn prefWidth="100.0" text="Mes a liquidar" />
+                              <TableColumn prefWidth="115.0" text="Fecha" />
+                              <TableColumn prefWidth="138.0" text="Valor total del sueldo" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="40.0" layoutY="110.0" prefHeight="21.0" prefWidth="131.0" text="Nombre empleado:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="288.0" layoutY="20.0" text="Gestión de Nóminas" textFill="#220557">
+                           <font>
+                              <Font name="Forte" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btNuevaNomina" layoutX="588.0" layoutY="310.0" mnemonicParsing="false" onAction="#nuevaNomina" text="Nuevo" />
+                        <Button fx:id="btVolverN" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+                        <Separator layoutY="290.0" prefHeight="0.0" prefWidth="763.0" />
+                        <Label layoutX="30.0" layoutY="252.0" text="Fecha de liquidación:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btElegirArchivoMolde" layoutX="559.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" text="Generar" />
+                        <Label layoutX="397.0" layoutY="77.0" text="Valor total del sueldo:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="127.0" layoutY="145.0" text="Cargo:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="423.0" layoutY="110.0" text="Detalles del pago:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboMesLiquidar" layoutX="190.0" layoutY="178.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboQuincena" layoutX="190.0" layoutY="213.0" prefWidth="150.0" />
+                        <DatePicker layoutX="190.0" layoutY="250.0" />
+                        <TextField layoutX="190.0" layoutY="143.0" />
+                        <TextField layoutX="558.0" layoutY="108.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Caja">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="354.0" fitWidth="763.0" opacity="0.05">
+                           <image>
+                              <Image url="@../../design/Sanely%20logo.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tableEmpleados2" layoutY="354.0" prefHeight="240.0" prefWidth="763.0">
+                           <columns>
+                              <TableColumn prefWidth="386.0" text="..." />
+                              <TableColumn prefWidth="376.0" text="..." />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="308.0" layoutY="20.0" text="Gestión de Caja" textFill="#220557">
+                           <font>
+                              <Font name="Forte" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btVolverCaja" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+                        <Separator layoutY="290.0" prefHeight="0.0" prefWidth="763.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Cuentas bancarias">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="354.0" fitWidth="763.0" opacity="0.05">
+                           <image>
+                              <Image url="@../../design/Sanely%20logo.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tableEmpleados21" layoutY="354.0" prefHeight="240.0" prefWidth="763.0">
+                           <columns>
+                              <TableColumn prefWidth="386.0" text="..." />
+                              <TableColumn prefWidth="376.0" text="..." />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="243.0" layoutY="20.0" text="Gestión de Cuentas Bancarias" textFill="#220557">
+                           <font>
+                              <Font name="Forte" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btVolverCuenta" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+                        <Separator prefHeight="0.0" prefWidth="763.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

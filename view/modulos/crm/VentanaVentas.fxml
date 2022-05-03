@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="aplicacion.controller.modulos.crm.VentanaVentasController">
+   <children>
+      <ImageView fitHeight="354.0" fitWidth="763.0" opacity="0.05">
+         <image>
+            <Image url="@../../design/Sanely%20logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="69.0" layoutY="101.0" text="Número de venta:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="159.0" text="Fecha de venta:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumVenta" layoutX="201.0" layoutY="99.0" />
+      <Label layoutX="400.0" layoutY="101.0" text="Doc. Vendedor:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="462.0" layoutY="222.0" text="Valor:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btAgregarVenta" layoutX="138.0" layoutY="310.0" mnemonicParsing="false" onAction="#agregarVenta" text="Agregar" />
+      <Button fx:id="btActualizarVenta" layoutX="287.0" layoutY="310.0" mnemonicParsing="false" onAction="#actualizarVenta" text="Actualizar" />
+      <Button fx:id="btEliminarVenta" layoutX="451.0" layoutY="310.0" mnemonicParsing="false" onAction="#eliminarVenta" text="Eliminar" />
+      <TableView fx:id="tableEmpleados" layoutX="1.0" layoutY="354.0" prefHeight="240.0" prefWidth="763.0">
+         <columns>
+            <TableColumn prefWidth="124.0" text="No. Venta" />
+            <TableColumn prefWidth="132.0" text="Fecha" />
+            <TableColumn prefWidth="113.0" text="Medio de pago" />
+            <TableColumn prefWidth="148.0" text="Vendedor" />
+            <TableColumn prefWidth="136.0" text="Cliente" />
+            <TableColumn prefWidth="108.0" text="Valor" />
+         </columns>
+      </TableView>
+      <Label layoutX="84.0" layoutY="222.0" text="Medio de pago:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDocCliente" layoutX="515.0" layoutY="157.0" />
+      <Label layoutX="294.0" layoutY="27.0" text="Gestión de Ventas" textFill="#220557">
+         <font>
+            <Font name="Forte" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btNuevaVenta" layoutX="589.0" layoutY="310.0" mnemonicParsing="false" onAction="#nuevaVenta" text="Nuevo" />
+      <Button fx:id="btVolver" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+      <Separator layoutX="1.0" layoutY="290.0" prefHeight="0.0" prefWidth="763.0" />
+      <Label layoutX="420.0" layoutY="159.0" text="Doc. Cliente:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDocVendedor" layoutX="515.0" layoutY="99.0" />
+      <TextField fx:id="txtValorVenta" layoutX="515.0" layoutY="220.0" />
+      <ComboBox fx:id="comboMedioPago" layoutX="201.0" layoutY="220.0" prefWidth="150.0" />
+      <DatePicker fx:id="dateFechaVenta" layoutX="200.0" layoutY="157.0" prefHeight="25.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
